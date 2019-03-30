@@ -37,6 +37,13 @@
           </div>
           <input type="submit" value="Add" class="btn btn-primary btn-block">
       </form>
+
+      <footer>
+        <p>
+          <script> document.write(new Date().getFullYear()); </script>
+          &copy; <i>your Gaming Store</i>
+        </p>
+      </footer>
     </div>
   </body>
 </html>

@@ -48,6 +48,7 @@
         <input type="submit"  value="Update" class="btn btn-block btn-secondary">
         </form>
         <a href="cat-list.php">Category List</a>
+    
     </div>
   </body>
 </html>

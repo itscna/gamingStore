@@ -79,6 +79,7 @@
         <input type="submit" value="Edit" class="btn btn-block btn-secondary">
       </form>
       <a href="product-list.php" class="text-primary">Back</a>
+  
     </div>
   </body>
 </html>

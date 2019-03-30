@@ -85,6 +85,7 @@ include "confs/auth.php";
       </div>
     </div>
 
-  </div>
+
+  
   </body>
 </html>
