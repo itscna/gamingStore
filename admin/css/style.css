@@ -1,0 +1,17 @@
+h2{
+  margin-top:15px;
+}
+form{
+  margin:5px 15px;
+  width:400px;
+}
+#detail_paragraph{
+  font-size:15px;
+  line-height:1.5em;
+  max-width:500px;
+  text-align:justify;
+}
+#menu{
+  width:100%;
+  padding:10px 20px;
+}
