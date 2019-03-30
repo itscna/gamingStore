@@ -1,4 +1,20 @@
-<?php include "confs/auth.php"; ?>
+<?php
+include "confs/config.php";
+include "confs/auth.php";
+
+ if(isset($_GET['category'])){
+     $cat=$_GET['category'];
+      $sql="SELECT products.*,categories.name FROM products LEFT JOIN categories ON
+         products.category_id=categories.id  WHERE categories.id='$cat' ORDER BY products.created_date DESC";
+
+         $result=mysqli_query($conn,$sql);
+     }else{
+       $sql="SELECT products.*,categories.name FROM products LEFT JOIN categories ON
+          products.category_id=categories.id ORDER BY products.created_date DESC";
+          $result=mysqli_query($conn,$sql);
+     }
+
+  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,13 +41,8 @@
       <div class="page-header">
         <h2>Products List</h2>
       </div>
-      <?php
-        include "confs/config.php";
-        $sql="SELECT products.*,categories.name FROM products LEFT JOIN categories ON
-              products.category_id=categories.id ORDER BY products.created_date DESC";
-        $result=mysqli_query($conn,$sql);
-       ?>
     <div class="row">
+
       <!--Category Sidebar Starts -->
         <div class="col-md-2">
           <aside>
@@ -47,20 +58,23 @@
                  </a>
                </li>
              <?php endwhile; ?>
+             <li>
+               <a href="product-new.php">Add New Product</a>
+             </li>
             </ul>
           </aside>
+
         </div>
         <!--Category Sidebar Ends -->
-
-        <div class="col-md-10">
+    <div class="col-md-10">
         <ul>
           <?php while($row=mysqli_fetch_assoc($result)): ?>
           <li>
             <img src="covers/<?php echo $row['cover']; ?>" alt="product_image" align="right" height="140">
             <h3> <?php echo $row['product_name']; ?> </h3>
             <p id="detail_paragraph"> <?php echo $row['detail']; ?> </p>
-            <p> price $(<?php echo $row['price']; ?>) in <i><?php echo $row['name']; ?></i></p>
-            <p> manufactured by <strong><?php echo $row['company_name']; ?></strong></p>
+            <p> price $(<?php echo $row['price']; ?>) in <strong><?php echo $row['name']; ?></strong></p>
+            <p> manufactured by <i><?php echo $row['company_name']; ?></i></p>
             <a href="product-del.php?id=<?php echo $row['id'];?>" class="text-danger" onClick="return confirm('Are you sure to delete it?')")>Delete</a>
             <a href="product-edit.php?id=<?php echo $row['id']; ?>" class="text-warning">Edit</a>
           </li><hr>
@@ -69,7 +83,7 @@
       </div>
       </div>
     </div>
-    <a href="product-new.php">Back</a>
+
   </div>
   </body>
 </html>
