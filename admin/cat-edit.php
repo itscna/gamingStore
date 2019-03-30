@@ -1,3 +1,6 @@
+<?php
+  include "confs/auth.php";
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

@@ -1,5 +1,6 @@
 <?php
 include "confs/config.php";
+include "confs/auth.php";
 $product_name=$_POST['product_name'];
 $price=$_POST['price'];
 $detail=$_POST['detail'];

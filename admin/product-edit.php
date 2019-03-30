@@ -1,3 +1,4 @@
+<?php include "confs/auth.php"; ?>
 <!DOCTYPE html>
 <html>
   <head>

@@ -1,5 +1,6 @@
 <?php
 include "confs/config.php";
+include "confs/auth.php";
 
 $id=$_GET['id'];
 

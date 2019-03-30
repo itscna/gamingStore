@@ -1,5 +1,6 @@
 <?php
  include "confs/config.php";
+ include "confs/auth.php";
 
  $name=mysqli_real_escape_string($conn,$_POST['cat_name']);
  $remark=mysqli_real_escape_string($conn,$_POST['remark']);
