@@ -37,7 +37,7 @@
           <textarea name="detail" class="form-control" id="detail"></textarea>
         </div>
         <div class="form-group">
-          <label for="producer">Company Name</label>
+          <label for="producer">Brand</label>
           <input type="text" name="company_name" id="producer" class="form-control">
         </div><br>
         <div class="custom-file">
@@ -49,7 +49,7 @@
           $sql="SELECT id,name FROM categories";
           $result=mysqli_query($conn,$sql);
          ?>
-         <select name="category_id" class="custom-select">
+         <select name="category_id" class="custom-select" required>
            <option value="0">Choose Category</option>
             <?php while($row=mysqli_fetch_assoc($result)): ?>
              <option value="<?php echo $row['id']; ?>">

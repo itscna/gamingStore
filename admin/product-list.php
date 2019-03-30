@@ -4,11 +4,13 @@ include "confs/auth.php";
 
  if(isset($_GET['category'])){
      $cat=$_GET['category'];
+     //if category is selected
       $sql="SELECT products.*,categories.name FROM products LEFT JOIN categories ON
          products.category_id=categories.id  WHERE categories.id='$cat' ORDER BY products.created_date DESC";
 
          $result=mysqli_query($conn,$sql);
      }else{
+       //if category is not selected
        $sql="SELECT products.*,categories.name FROM products LEFT JOIN categories ON
           products.category_id=categories.id ORDER BY products.created_date DESC";
           $result=mysqli_query($conn,$sql);
@@ -63,8 +65,7 @@ include "confs/auth.php";
              </li>
             </ul>
           </aside>
-
-        </div>
+    </div>
         <!--Category Sidebar Ends -->
     <div class="col-md-10">
         <ul>
