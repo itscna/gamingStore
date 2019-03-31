@@ -11,5 +11,5 @@ if($admin_name=="admin" AND $pwd=="12345" )
   header("location:product-list.php");
 }
 else {
-   header("location:index.php");
+  header("location:index.php?login=failed");
 }

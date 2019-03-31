@@ -38,12 +38,12 @@
           <input type="submit" value="Add" class="btn btn-primary btn-block">
       </form>
 
-      <footer>
-        <p>
-          <script> document.write(new Date().getFullYear()); </script>
-          &copy; <i>your Gaming Store</i>
-        </p>
-      </footer>
-    </div>
-  </body>
+      <div class="card" id="card">
+      <div class="card-footer">
+        <p>Hello World</p>
+      </div>
+      </div>
+
+      </div>
+</body>
 </html>

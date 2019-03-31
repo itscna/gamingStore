@@ -48,7 +48,7 @@ include "confs/auth.php";
       <!--Category Sidebar Starts -->
         <div class="col-md-2">
           <aside>
-            <ul>
+            <ul class="category">
               <li> <a href="product-list.php">All Categories</a></li>
 
               <?php $cats=mysqli_query($conn,"SELECT * FROM categories");
@@ -83,9 +83,5 @@ include "confs/auth.php";
         </ul>
       </div>
       </div>
-    </div>
-
-
-  
-  </body>
+</div></body>
 </html>

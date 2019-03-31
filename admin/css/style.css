@@ -28,3 +28,12 @@ label.error{
   font-style:italic;
   color:#a13af4;
 }
+.category{
+  list-style:none;
+  width:100%;
+}
+.category li{
+  border-bottom:1px solid black;
+  margin:0;
+  padding:10px;
+}
