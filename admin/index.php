@@ -13,12 +13,13 @@
       <div class="page-header">
         <h2 class="header">Admin Panel Login</h2>
       </div>
-      <?php if(isset($_GET['login']) AND $_GET['login']=='failed'): ?>
-       <div class="alert alert-info" role="alert">
-         <p>You entered the incorrect Name or Password
-           <a href="index.php" class="alert-link">Try Again</a></p>
-      </div>
-     <?php endif; ?>
+      <?php if(isset($_GET['login']) AND $_GET['login']=="failed" ): ?>
+          <div class="alert alert-info" role="alert">
+            <p>You entered the incorrect Name Or Password
+              <a href="index.php" class="alert-link">Try Again</a>
+             </p>
+          </div>
+   <?php endif; ?>
       <div class="row">
         <form action="login.php" method="post" class="login_form">
           <div class="form-group">
