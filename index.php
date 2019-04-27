@@ -84,11 +84,11 @@
         </div>
       </div>
       <div class="row">
-        <footer>
+        <footer class="footer">
           <span>
                 <script type="text/javascript"> document.write(new Date().getFullYear()); </script>
                 &copy; Hello Gaming World
-                <a href="index.php"> Home</a>
+                <a href="index.php">Home</a>
           </span>
         </footer>
       </div>
